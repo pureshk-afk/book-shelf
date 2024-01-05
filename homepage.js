@@ -19,7 +19,7 @@ const initSliders = () =>{
 
     slideButtons.forEach(button => {
         button.addEventListener("click", () => {
-            const direction = button.id === "prev-slides"  ? -1 : 1;
+            const direction = button.id === "prev-slides" ? -1 : 1;
             const scrollAmount = imageList.clientWidth * direction;
             imageList.scrollBy({left: scrollAmount, behavior: "smooth"})
         });
@@ -27,3 +27,18 @@ const initSliders = () =>{
 };
 
 window.addEventListener("load", initSliders)
+
+const initSliderss = () =>{
+    const imageList = document.querySelector(".container-scroll_slider-wrapp .image-list_three");
+    const slideButtons = document.querySelectorAll(".container-scroll_slider-wrapp .slide-buttonnn");
+
+    slideButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const direction = button.id === "prev-slides_two" ? -1 : 1;
+            const scrollAmount = imageList.clientWidth * direction;
+            imageList.scrollBy({left: scrollAmount, behavior: "smooth"})
+        });
+    });
+};
+
+window.addEventListener("load", initSliderss)

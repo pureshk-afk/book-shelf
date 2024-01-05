@@ -178,7 +178,7 @@ article{
     justify-content: center;
     flex-direction: column;
     gap: 100px;
-    text-align: center;
+    text-align: start;
     
 }
 
@@ -224,7 +224,7 @@ article{
 }
 
 
-
+/*фантастика*/
 
 .container-scroll{
     max-width: 1515px;
@@ -252,9 +252,7 @@ article{
     object-fit: cover;
 }
 
-.container-scroll_slider-wrap{
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.35) 0.71%, rgba(97, 91, 91, 0.24) 100%);
-}
+
 
 .container-scroll_slider-wrap .image-list_two::-webkit-scrollbar{
     display: none;
@@ -295,3 +293,115 @@ article{
     background-color: rgb(52, 50, 50);
 
 }
+
+
+/*зарубежная литература*/
+
+.container-scroll_two{
+    max-width: 1515px;
+    width: 95%;
+    
+    
+}
+
+.container-scroll_slider-wrapp .image-list_three{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    gap: 18px;
+    align-items: end;
+    font-size: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    margin-bottom: 30px;
+  
+    
+}
+
+.image-list_three img{
+    width: 263px;
+    height: 367px;
+    object-fit: cover;
+}
+
+
+
+.container-scroll_slider-wrapp .image-list_three::-webkit-scrollbar{
+    display: none;
+}
+
+.container-scroll_slider-wrapp .slide-buttonnn{
+    position: absolute;
+
+    height: 50px;
+    width: 50px;
+    color: #FFF;
+    background-color: #000000;
+    font-size: 2.2rem;
+    cursor: pointer;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+}
+
+.container-scroll_slider-wrapp .slide-buttonnn#prev-slides_two{
+    left: -20px;
+}
+
+.container-scroll_slider-wrapp .slide-buttonnn#next-slides_two{
+    right: -20px;
+}
+
+.container-scroll_slider-wrapp{
+    position: relative;
+}
+
+.container-scroll_slider-wrapp .slide-buttonnn:hover{
+    background-color: rgb(52, 50, 50);
+
+}
+
+
+.fantasy{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.popular{
+    margin-top: 100px;
+}
+
+.card{
+    display: flex;
+    width: inherit;
+    height: inherit;
+    padding: 10px;
+    font-size: large;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #FFF;
+    border: 1px solid black;
+}
+
+.card .card-buttons button{
+    width: 45%;
+    height: 50px;
+    font-size: large;
+    background-color: #FFF;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+
+.card-buttons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
