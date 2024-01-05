@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2? Family= Inter & display=swap');
+@import url('https://fonts.googleapis.com/css2? Family= Anonymous+Pro & Family= Caveat & Family= Inter & display=swap');
 
 *{
     margin: 0;
@@ -43,19 +43,30 @@ header{
 .content-menu a{
     text-decoration: none;
     color: white;
-    color: #FFF;
 
-    font-family: 'Inter';
+
+    font-family: Arial, sans-serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    flex-shrink: 0;
+    
 
 
 }
 
 
 /*главный слайдер*/
+
+.popular h2{
+
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
 
 .scroll{
     max-width: 1515px;
@@ -221,6 +232,37 @@ article{
     
     border-left: 1px solid black;
 
+}
+
+.blog_content-text_data{
+    color: #000;
+
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.blog_content-text_hader h1{
+
+
+
+    font-family: 'Caveat';
+    font-size: 90px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.blog_content-text_hader h2{
+
+    font-family: Anonymous Pro;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    
 }
 
 
@@ -405,3 +447,45 @@ article{
 }
 
 
+@media (max-width: 770px) {
+    .scroll{
+        max-width: 400px;
+        
+        
+        
+    }
+    
+    .content-menu a{
+        display: none;
+    }
+
+    .blog_content{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .blog_content-text{
+        width: 100%;
+    }
+
+    .blog_content img{
+        margin: auto;
+    }
+
+    .popular{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .container-scroll{
+        max-width: 400px; 
+    }
+
+    .container-scroll_two{
+        max-width: 400px;
+        
+    }
+    
+
+}
