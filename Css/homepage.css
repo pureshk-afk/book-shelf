@@ -81,8 +81,9 @@ header{
     gap: 18px;
     align-items: end;
     font-size: 0;
-    overflow-x: auto;
-    scrollbar-width: none;
+    overflow-x:scroll;
+    scroll-behavior: smooth;
+   
     margin-bottom: 30px;
     
 }
@@ -119,6 +120,7 @@ header{
     position: absolute;
     border-radius: inherit;
     cursor: grab;
+    
 
 }
 
@@ -177,6 +179,14 @@ header{
 .slider-wrap .slide-button:hover{
     background-color: rgb(52, 50, 50);
 
+}
+
+.image-list img{
+    transition: 1s;
+}
+
+.image-list img:hover{
+    transform: scale(1.1);
 }
 
 /*новость из блога*/
@@ -334,6 +344,15 @@ article{
 .container-scroll_slider-wrap .slide-buttonn:hover{
     background-color: rgb(52, 50, 50);
 
+}
+
+.card-buttons button:hover{
+
+
+    background-color: #000000 !important;
+    color: white;
+    cursor: pointer;
+    border: none;
 }
 
 
