@@ -42,3 +42,5 @@ const initSliderss = () =>{
 };
 
 window.addEventListener("load", initSliderss)
+
+
