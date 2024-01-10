@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Css/registration.css">
+    <title>Document</title>
+
+</head>
+<body>
+    <header>
+        <div class="content">
+            <img src="../Images/лого.png" alt="">
+            <div class="content-menu">
+                <a href="#">Книжные новости</a>
+                <a href="#">Жанры</a>
+                <a href="#">Контакты</a>
+                <a href="#">Вход / регистрация</a>
+                
+                
+            </div>
+            <div class="burger">
+                <span></span>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="container_registration">
+            <h1>Регистрация</h1>
+            <form>
+                <input type="text" placeholder="Имя пользователя">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Пароль">
+                <input type="password" placeholder="Повтор пароля">
+                
+                <button class="btn" type="submit">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.burger').addEventListener('click', function(){
+            this.classList.toggle('active');
+            document.querySelector('.content-menu').classList.toggle('open');
+        })
+    </script>
+    
+</body>
+</html>
