@@ -15,10 +15,11 @@
                 <a href="#">Жанры</a>
                 <a href="#">Контакты</a>
                 <a href="#">Вход / регистрация</a>
-                <div class="burger">
-                    <span></span>
-                </div>
                 
+                
+            </div>
+            <div class="burger">
+                <span></span>
             </div>
         </div>
 
@@ -61,6 +62,13 @@
             </div>
         </div>
     </div>
+
+    <script>
+        document.querySelector('.burger').addEventListener('click', function(){
+            this.classList.toggle('active');
+            document.querySelector('.content-menu').classList.toggle('open');
+        })
+    </script>
 
 </body>
 </html>

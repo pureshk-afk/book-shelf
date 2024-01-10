@@ -19,6 +19,9 @@
                 <a href="#">Контакты</a>
                 <a href="#">Вход / регистрация</a>
             </div>
+            <div class="burger">
+                <span></span>
+            </div>
         </div>
 
     </header>
@@ -240,7 +243,12 @@
   
 
        
-    
+    <script>
+        document.querySelector('.burger').addEventListener('click', function(){
+            this.classList.toggle('active');
+            document.querySelector('.content-menu').classList.toggle('open');
+        })
+    </script>
 
     <script src="homepage.js" defer></script>
 </body>
