@@ -284,10 +284,17 @@ article{
     
 }
 
+.blog_content img{
+    max-width: 100%;
+    height: auto;
+
+    width: 40%;
+}
+
 .blog_content-text{
     display: flex;
     flex-direction: column;
-    gap: 90px;
+    gap: 80px;
     text-align: center;
     justify-content: center;
     width: 50%;
@@ -607,6 +614,11 @@ article{
 
     .blog_content img{
         margin: auto;
+        width: 100%;
+    }
+
+    .blog_content-text_hader h1{
+        font-size: 60px;
     }
 
     .popular{
