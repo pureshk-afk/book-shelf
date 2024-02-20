@@ -1,6 +1,10 @@
 from os import path
+from os import path, getenv as env
+from dotenv import load_dotenv
 from pathlib import Path
 from datetime import timedelta
+
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / "subdir".
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -10,16 +14,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "a)&tg!@-@liw2+v!_64!v1_o+2r%e3ufl#e!n*_ar5a$q=9n!p"
+SECRET_KEY = env("SECRET_KEY")
 
 # SECURITY WARNING: don"t run with debug turned on in production!
-DEBUG = True
-
+DEBUG = bool(int(env("DEBUG")))
 
 ALLOWED_HOSTS = [
     "127.0.0.1",
     "0.0.0.0",
-    "backend.localhost"
+    "backend.localhost",
+    "api.bookshelf.labofdev.ru"
 ]
 
 
@@ -90,12 +94,28 @@ WSGI_APPLICATION = "server.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+if DEBUG:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
     }
-}
+
+else:
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.postgresql",
+            "NAME": env("DB_NAME"),
+            "USER": env("DB_USER"),
+            "PASSWORD": env("DB_PASSWORD"),
+            "HOST": env("DB_HOST"),
+            "PORT": int( env("DB_PORT") ),
+        }
+    }
+
+
+
 
 # Rest Framework Settings
 # https://www.django-rest-framework.org
