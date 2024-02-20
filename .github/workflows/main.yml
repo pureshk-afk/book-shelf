@@ -1,0 +1,54 @@
+name: Main CI CD
+on:
+    push:
+      branches: [ "main" ]
+    pull_request:
+      branches: [ "main" ]
+
+jobs:
+  frontend-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@f4ef78c080cd8ba55a85445d5b36e214a81df20a
+        with:
+          username: xoriax
+          password: d0cHu8P4ss
+    
+      - name: Preparing frontend image
+        working-directory: ./src/frontend
+        run: docker build -t ${{ github.event.repository.name }}-frontend -f ./Dockerfile .
+
+      - name: Tagging frontend image
+        working-directory: ./src/frontend
+        run: docker image tag ${{ github.event.repository.name }}-frontend xoriax/${{ github.event.repository.name }}-frontend:latest
+
+      - name: Pushing frontend image
+        working-directory: ./src/frontend
+        run: docker push xoriax/${{ github.event.repository.name }}-frontend:latest
+
+
+  backend-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@f4ef78c080cd8ba55a85445d5b36e214a81df20a
+        with:
+          username: xoriax
+          password: d0cHu8P4ss
+    
+      - name: Preparing backend image
+        working-directory: ./src/backend
+        run: docker build -t ${{ github.event.repository.name }}-backend -f ./Dockerfile .
+
+      - name: Tagging backend image
+        working-directory: ./src/backend
+        run: docker image tag ${{ github.event.repository.name }}-backend xoriax/${{ github.event.repository.name }}-backend:latest
+
+      - name: Pushing backend image
+        working-directory: ./src/backend
+        run: docker push xoriax/${{ github.event.repository.name }}-backend:latest

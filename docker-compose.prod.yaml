@@ -2,7 +2,7 @@ version: '3.9'
 services:
 
   backend:
-    image: xoriax/bookshelf-backend:latest
+    image: xoriax/book-shelf-backend:latest
     container_name: backend
     restart: always
     labels:
@@ -41,7 +41,7 @@ services:
       - "4000:4000"
 
   frontend:
-    image: xoriax/bookshelf-frontend:latest
+    image: xoriax/book-shelf-frontend:latest
     labels:
       - "traefik.enable=true"
       - "traefik.docker.network=web"
