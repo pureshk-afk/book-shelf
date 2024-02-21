@@ -1,8 +1,9 @@
-from os import path
-from os import path, getenv as env
-from dotenv import load_dotenv
-from pathlib import Path
 from datetime import timedelta
+from os import getenv as env
+from os import path
+from pathlib import Path
+
+from dotenv import load_dotenv
 
 load_dotenv()
 
@@ -52,6 +53,7 @@ INSTALLED_APPS = [
     "authsystem",
     "book",
     "post",
+    "cart",
 ]
 
 MIDDLEWARE = [

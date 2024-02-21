@@ -1,12 +1,12 @@
+from django.conf import settings
+from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path, include
-from drf_yasg.views import get_schema_view
+from django.urls import include, path
 from drf_yasg import openapi
+from drf_yasg.views import get_schema_view
 from rest_framework import permissions
 
 from .settings import DEBUG
-from django.conf import settings
-from django.conf.urls.static import static
 
 schema_view = get_schema_view(
     openapi.Info(
@@ -30,6 +30,7 @@ urlpatterns = [
     path('auth/', include('authsystem.urls')),
     path('shelf/', include('book.urls')),
     path('post/', include('post.urls')),
+    path('cart/', include('cart.urls')),
     ]))
 ] + static(
     settings.STATIC_URL, document_root=settings.STATIC_ROOT
