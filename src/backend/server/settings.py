@@ -25,6 +25,7 @@ ALLOWED_HOSTS = [
     "0.0.0.0",
     "backend.localhost",
     "api.bookshelf.labofdev.ru"
+    "bookshelf.labofdev.ru"
 ]
 
 
