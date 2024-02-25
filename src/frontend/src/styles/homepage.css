@@ -1,127 +1,3 @@
-@import url('https://fonts.googleapis.com/css2? Family= Anonymous+Pro & Family= Caveat & Family= Inter & display=swap');
-
-*{
-    margin: 0;
-}
-
-.open{
-    display: flex !important;
-}
-
-
-header{
-    display: flex;
-    background-color: black;
-  
-
-    width: 100%;
-    height: 80px;
-
-    flex-direction: column;
-   
-}
-
-.content{
-    display: flex;
-    width: 92%;
-    justify-content: space-between;
-    margin-right:auto;
-    margin-left: auto;
-    
-}
-
-.content-menu{
-    display: flex;
-    justify-content: space-evenly;
-
-    width: 55%;
-  
-    align-items: flex-start;
-    margin-top: auto;
-    margin-bottom: auto;
-    
-
-
-}
-
-.content-menu a{
-
-    display: flex;
-    text-decoration: none;
-    color: white;
-    list-style: none;
-
-
-    font-family: Arial, sans-serif;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    flex-shrink: 0;
-    
-
-
-}
-
-/*бургер меню*/
-
-.burger{
-    display: none;
-    position: relative;
-    z-index: 50;
-    align-items: center;
-    justify-content: flex-end;
-    
-    width: 30px;
-    height: 18px;
-}
-
-.burger span{
-    height: 2px;
-    width: 80%;
-    transform: scale(1);
-    background-color: #FFF;
-}
-
-.burger.active span { 
-    transform: scale(0); 
-}
-
-.burger::before, .burger::after{
-    content: "";
-    position: absolute;
-    height: 2px;
-    width: 100%;
-    background-color: #FFF;
-    transition: all 0.3s ease 0s;
-}
-
-.burger::before{
-    top: 0;
-}
-
-.burger::after{
-    bottom: 0;
-}
-
-/*анимация бургер-меню*/
-
-
-
-.burger.active::before{
-    top: 50%;
-    transform: rotate(-45deg) translate(0, -50%);
-
-}
-
-.burger.active::after{
-    bottom: 50%;
-    transform: rotate(45deg) translate(0, 50%);
-}
-
-
-
-
 /*главный слайдер*/
 
 .popular h2{
@@ -377,7 +253,7 @@ article{
     display: none;
 }
 
-.container-scroll_slider-wrap .slide-buttonn{
+.container-scroll_slider-wrap .slide-button{
     position: absolute;
 
     height: 50px;
@@ -396,11 +272,11 @@ article{
 
 }
 
-.container-scroll_slider-wrap .slide-buttonn#prev-slides{
+.container-scroll_slider-wrap .slide-button#prev-slides{
     left: -20px;
 }
 
-.container-scroll_slider-wrap .slide-buttonn#next-slides{
+.container-scroll_slider-wrap .slide-button#next-slides{
     right: -20px;
 }
 
@@ -408,7 +284,7 @@ article{
     position: relative;
 }
 
-.container-scroll_slider-wrap .slide-buttonn:hover{
+.container-scroll_slider-wrap .slide-button:hover{
     background-color: rgb(52, 50, 50);
 
 }
@@ -457,7 +333,7 @@ article{
     display: none;
 }
 
-.container-scroll_slider-wrapp .slide-buttonnn{
+.container-scroll_slider-wrapp .slide-button{
     position: absolute;
 
     height: 50px;
@@ -476,11 +352,11 @@ article{
 
 }
 
-.container-scroll_slider-wrapp .slide-buttonnn#prev-slides_two{
+.container-scroll_slider-wrapp .slide-button#prev-slides_two{
     left: -20px;
 }
 
-.container-scroll_slider-wrapp .slide-buttonnn#next-slides_two{
+.container-scroll_slider-wrapp .slide-button#next-slides_two{
     right: -20px;
 }
 
@@ -488,7 +364,7 @@ article{
     position: relative;
 }
 
-.container-scroll_slider-wrapp .slide-buttonnn:hover{
+.container-scroll_slider-wrapp .slide-button:hover{
     background-color: rgb(52, 50, 50);
 
 }
@@ -532,58 +408,9 @@ article{
     align-items: center;
 }
 
-
-
-
-@keyframes burgerAnimation {
-    from {opacity: 0}
-    to {opacity: 1}
-}
-
-
-
-
 @media (max-width: 770px) {
     .scroll{
         max-width: 400px;
-        
-    }
-
-    .burger{
-        display: flex;
-       justify-content: center;
-    }
-   
-    .content{
-        display: flex;
-        align-items: center;
-    }
-    
-    .content-menu{
-        display: none;
-        flex-direction: column;
-        
-        position: fixed;
-        height: 100%;
-        
-
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 50;
-        overflow-y: auto;
-        padding: 50px 40px;
-        background-color: #000000e7;
-        animation: burgerAnimation 0.4s;
-        
-    }
-
-    .content-menu a{
-        
-        flex-direction: column;
-        
-        row-gap: 30px;
     }
 
     .blog_content{
@@ -611,8 +438,5 @@ article{
 
     .container-scroll_two{
         max-width: 400px;
-        
     }
-    
-
 }

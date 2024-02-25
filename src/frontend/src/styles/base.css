@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2? Family= Anonymous+Pro & Family= Caveat & Family= Inter & display=swap');
+
+*{
+    margin: 0;
+}
+
+.input__classic{
+    height: 67px;
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+.input__classic::placeholder{
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+.button__classic {
+    height: 67px;
+    width: 100%;
+
+    border-radius: 3px;
+    border: 2px solid #000;
+
+    background: #FFF;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    cursor: pointer;
+}
+
+.button__classic:hover{
+    background-color: #000;
+    color: #FFF;
+}
+
+.button__classic__invert {
+    border: 2px solid #FFF;
+    color: #FFF;
+    background: #000;
+}
+
+.button__classic__invert:hover{
+    background-color: #FFF;
+    border: 2px solid #000;
+    color: #000;
+}
+
+.container{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    margin-top: 100px;
+}
