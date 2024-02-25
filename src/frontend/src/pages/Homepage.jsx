@@ -1,13 +1,12 @@
-import React from 'react'
+import { Header } from "../components/common/Header";
 import { HomepageContent } from "../components/pageComponents/homepage/HomepageContent";
-import { Header } from '../components/common/Header'
-import "../styles/homepage.css"
+import "../styles/homepage.css";
 
 export const Homepage = () => {
   return (
     <>
-        <Header />
-        <HomepageContent />
+      <Header />
+      <HomepageContent />
     </>
-  )
-}
+  );
+};
