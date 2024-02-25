@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2? Family= Anonymous+Pro & Family= Caveat & Family= Inter & display=swap');
 
+
+
+
 *{
     margin: 0;
 }
@@ -15,30 +18,83 @@ header{
   
 
     width: 100%;
-    height: 80px;
+    height: 150px;
 
     flex-direction: column;
    
 }
 
-.content{
+.search-container{
     display: flex;
-    width: 92%;
-    justify-content: space-between;
-    margin-right:auto;
-    margin-left: auto;
+    width: inherit;
+    
+
+   
+    
+
+    
+
+}
+
+.search-container input{
+    width: 70%;
+    height: 40px;
+
+    border: none;
+
+    border-radius: 2px  0  0 2px ;
+
+}
+
+.search-container button{
+    background-color: white;
+    border: none;
+    border-radius: 0 2px 2px  0 ;
+}
+
+.search-container input::placeholder{
+    padding-left: 10px;
+}
+
+
+
+
+.content-menu-all{
+    display: flex;
+    width: 90%;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 20px;
     
 }
 
+
+.content{
+    display: flex;
+    width: 92%;
+    justify-content: space-evenly;
+    margin-right:auto;
+    margin-left: auto;
+    margin: auto;
+    
+}
+
+
+
+
 .content-menu{
     display: flex;
-    justify-content: space-evenly;
+    
 
-    width: 55%;
+    width: 70%;
+
+    gap: 15%;
   
-    align-items: flex-start;
-    margin-top: auto;
-    margin-bottom: auto;
+    
+    
+
+
+
     
 
 
@@ -121,7 +177,164 @@ header{
 
 
 
+.welcome-post{
+    background-color: #000;
+    /* background-image: url(/Images/back.png); */
+    background-size: cover;
+    background-repeat: no-repeat;
 
+    width: 100%;
+    height: 750px;
+
+    margin-top: 20px;
+
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+
+    
+    
+    
+    
+}
+
+.welcome-post__content{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+
+
+}
+
+.welcome-post__content h1{
+    font-size: 60px;
+    
+}
+.welcome-post__content p{
+    font-size: 36px;
+}
+.welcome-post__content button{
+    width: 250px;
+    height: 70px;
+    border-radius: 43px;
+
+    font-size: 20px;
+    margin-top: 30px;
+    
+}
+
+
+/* категории*/
+
+.categori{
+    width: 90%;
+    height: 984px;
+
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+
+    
+    
+
+}
+
+.categori__h{
+    text-align: start;
+    margin-left: 100px;
+}
+
+.categori__cards{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    justify-items: center;
+}
+
+.__card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid black;
+    
+}
+
+.__card img{
+    max-width: 100%;
+    height: 90%;
+
+    width: 100%;
+}
+
+
+/* .categori{
+    width: 90%;
+    height: 984px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    align-items: center;
+    
+    
+    
+    
+
+}
+
+
+
+.categori__cards{
+    width: inherit;
+    height: 822px;
+
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    
+    
+    
+    
+    align-items: center;
+
+
+}
+
+.__card{
+    width: 383px;
+    height: 356px;
+
+    display: flex;
+    
+    border: 1px solid black;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+
+
+    font-size: 32px;
+    font-weight: 300;
+
+}
+
+.__card img{
+    max-width: 80%;
+    height: 80%;
+
+    width: 100%;
+    
+
+
+} */
 /*главный слайдер*/
 
 .popular h2{
@@ -549,6 +762,18 @@ article{
     align-items: center;
 }
 
+
+
+footer{
+    background-color: #000;
+
+    width: 100%;
+   
+    height: 500px;
+
+
+    margin-top: 200px;
+}
 
 
 
