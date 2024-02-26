@@ -41,6 +41,10 @@ class CookieManager {
   deleteCookie(name) {
     this.setCookie(name, "", { "max-age": -1 });
   }
+
+  clearStatement() {
+    document.cookie = "";
+  }
 }
 
 export default CookieManager;

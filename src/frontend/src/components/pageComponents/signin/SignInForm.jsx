@@ -15,7 +15,11 @@ export const SignInForm = () => {
 
     setIsLoading(true);
 
-    const data = await SignInHook(loginData);
+    const data = await SignInHook(loginData).catch(() => {
+      setIsLoading(false);
+      alert("Введены неверные данные");
+      return;
+    });
 
     setIsLoading(false);
 
@@ -33,7 +37,7 @@ export const SignInForm = () => {
       <div className="container_sign-in">
         <button
           className="button__classic"
-          onClick={() => navigate("/register")}
+          onClick={() => navigate("/registration")}
         >
           Зарегистрироваться
         </button>
