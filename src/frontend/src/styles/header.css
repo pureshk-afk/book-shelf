@@ -103,6 +103,10 @@ header{
     display: flex !important;
 }
 
+.link_sign {
+    display: flex;
+}
+
 @keyframes burgerAnimation {
     from {opacity: 0}
     to {opacity: 1}

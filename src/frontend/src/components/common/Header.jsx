@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 import logo from "../../images/logo.png";
 import "../../styles/header.css";
 
@@ -18,7 +19,10 @@ export const Header = () => {
           <a href="#">Книжные новости</a>
           <a href="#">Жанры</a>
           <a href="#">Контакты</a>
-          <a href="#">Вход / регистрация</a>
+          <span className="link_sign">
+            <Link to="/signin">Вход</Link> {"/"}
+            <Link to="/signin">/ регистрация</Link>
+          </span>
         </div>
         <div className="burger" onClick={(e) => openBurger(e)}>
           <span></span>
