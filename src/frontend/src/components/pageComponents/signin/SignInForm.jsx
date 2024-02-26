@@ -1,21 +1,31 @@
-import Axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { SignInHook } from "../../../api/auth/SignInHook";
+import CookieManager from "../../../managers/";
 import "../../../styles/signin.css";
+import { Loader } from "../../common/Loader";
 
 export const SignInForm = () => {
   const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(false);
   const [loginData, setLoginData] = useState({ email: "", password: "" });
 
   const signinSubmit = async (e) => {
     e.preventDefault();
 
-    const data = await Axios.post(
-      "https://api.bookshelf.labofdev.ru/api/v1/auth/login/",
-      loginData
-    );
+    setIsLoading(true);
 
-    console.log(data);
+    const data = await SignInHook(loginData);
+
+    setIsLoading(false);
+
+    if (data) {
+      CookieManager.setCookie("refresh", data.refresh);
+      CookieManager.setCookie("access", data.access);
+      navigate("/");
+    }
+
+    return data;
   };
 
   return (
@@ -50,9 +60,13 @@ export const SignInForm = () => {
 
           <button
             type="submit"
-            className="button__classic button__classic__invert"
+            disabled={isLoading}
+            className={
+              `button__classic button__classic__invert` +
+              (isLoading ? " button__classic__invert__disabled" : "")
+            }
           >
-            Войти
+            {isLoading ? <Loader /> : "Войти"}
           </button>
         </form>
       </div>

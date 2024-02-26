@@ -9,7 +9,6 @@ export const HomepageContent = () => {
           <div className="scroll">
             <div className="slider-wrap">
               <button
-                onClick=""
                 id="prev-slide"
                 className="slide-button material-symbols-outlined"
               >

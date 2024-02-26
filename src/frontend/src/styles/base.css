@@ -49,6 +49,13 @@
     color: #000;
 }
 
+.button__classic__invert__disabled:hover {
+    border: 2px solid #FFF;
+    color: #FFF;
+    background: #000;
+    cursor: progress;
+}
+
 .container{
     display: flex;
 
