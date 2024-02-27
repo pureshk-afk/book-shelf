@@ -1,5 +1,5 @@
-import axios from "axios";
-import BASE_URL from "..";
+import axios from 'axios';
+import BASE_URL from '..';
 
 export const SignInHook = async (loginData) => {
   const { data, status } = await axios

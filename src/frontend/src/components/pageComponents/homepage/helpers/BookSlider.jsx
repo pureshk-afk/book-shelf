@@ -1,6 +1,6 @@
-import { useState } from "react";
-import preview from "../../../../images/image 1.png";
-import { BookCard } from "./BookCard";
+import { useState } from 'react';
+import preview from '../../../../images/image 1.png';
+import { BookCard } from './BookCard';
 
 export const BookSlider = ({ title }) => {
   const [data, setData] = useState([
@@ -10,22 +10,22 @@ export const BookSlider = ({ title }) => {
     { cost: 114, preview: preview },
     { cost: 115, preview: preview },
     { cost: 116, preview: preview },
-    { cost: 117, preview: preview }
+    { cost: 117, preview: preview },
   ]);
 
   return (
-    <div className="fantasy">
+    <div className='fantasy'>
       <h2>{title}</h2>
-      <div className="container-scroll">
-        <div className="container-scroll_slider-wrap">
+      <div className='container-scroll'>
+        <div className='container-scroll_slider-wrap'>
           <button
-            onClick=""
-            id="prev-slides"
-            className="slide-button material-symbols-outlined"
+            onClick=''
+            id='prev-slides'
+            className='slide-button material-symbols-outlined'
           >
-            {"<-"}
+            {'<-'}
           </button>
-          <div className="image-list_two">
+          <div className='image-list_two'>
             {data.map((book) => (
               <BookCard
                 key={book.cost}
@@ -35,11 +35,11 @@ export const BookSlider = ({ title }) => {
             ))}
           </div>
           <button
-            onClick=""
-            id="next-slides"
-            className="slide-button material-symbols-outlined"
+            onClick=''
+            id='next-slides'
+            className='slide-button material-symbols-outlined'
           >
-            {"->"}
+            {'->'}
           </button>
         </div>
       </div>
