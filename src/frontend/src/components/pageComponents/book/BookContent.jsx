@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
+import { addItemToCart } from '../../../api/payload/FetchProcedures';
 import {
   fetchBookById,
   fetchCategoryById,
@@ -9,14 +10,17 @@ import { BookMore } from './BookMore';
 
 export const BookContent = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const [book, setBook] = useState({});
   const [category, setCategory] = useState({});
 
   useEffect(() => {
-    fetchBookById(id).then((r) => {
-      setBook(r);
-      fetchCategoryById(r.category_id).then((r) => setCategory(r));
-    });
+    fetchBookById(id)
+      .then((r) => {
+        setBook(r);
+        fetchCategoryById(r.category_id).then((r) => setCategory(r));
+      })
+      .catch(() => navigate('/'));
   }, []);
 
   return (
@@ -31,12 +35,17 @@ export const BookContent = () => {
         <img src={book.preview} className='preview-book' />
 
         <div className='product-content_info'>
-          <h1>Книга: {book.title}”</h1>
+          <h1>Книга: ”{book.title}”</h1>
           <div className='product-content_info-menu'>
             <div className='price'>
               <h1>{book.description} ₽</h1>
             </div>
-            <button className='button__classic'>Добавить в корзину</button>
+            <button
+              className='button__classic'
+              onClick={() => addItemToCart(book, navigate)}
+            >
+              Добавить в корзину
+            </button>
           </div>
 
           <BookMore
