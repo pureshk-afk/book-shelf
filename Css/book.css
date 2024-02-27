@@ -1,5 +1,9 @@
 body{
     margin: 0;
+    display: flex;
+    flex-direction: column;
+
+    gap: 100px;
 }
 
 
@@ -130,7 +134,7 @@ article{
     display: flex;
     max-width: 80%;
     width: 100%;
-    background-color: aqua;
+
 
     flex-direction: column;
     
@@ -194,4 +198,74 @@ h1{
     background-color: black;
     color: #FFF;
 
+}
+
+footer{
+    display: flex;
+    width: 100%;
+    background-color: black;
+}
+.footer_all-content{
+    display: flex;
+    width: 100%;
+
+}
+
+.footer_all-content__two{
+    display: flex;
+    flex-direction: row;
+    width: inherit;
+    justify-content: center;
+    align-items: center;
+}
+
+.book_pic{
+    max-height: 100%;
+    height: 80%;
+    margin-top: 30px;
+    
+}
+
+.__info{
+    width: 100%;
+}
+
+.__info p, h4{
+    color: #FFF;
+}
+.footer_all-content__many{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    width: 70%;
+}
+
+.info__content{
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+}
+
+.logo{
+    max-width: 150px;
+}
+
+.footer_all-content__many hr{
+    width: 100%;
+
+}
+.card-one{
+    width: 14%s;
+}
+
+.card-one__links{
+    display: flex;
+    width: 100%;
+    justify-content: end;
+
+}
+
+.link{
+    width: 100px;
 }
