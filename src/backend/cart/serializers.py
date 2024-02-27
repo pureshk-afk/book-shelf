@@ -15,7 +15,9 @@ class CartBookSerializer(ModelSerializer):
 
 class CartSerializer(ModelSerializer):
     user = UserPresentationSerializer(source="user_id", many=False, read_only=True)
-    cart_books_items = CartBookSerializer(many=True, read_only=True)
+    cart_books_items = CartBookSerializer(
+        source="cart_books", many=True, read_only=True
+    )
 
     class Meta:
         model = Cart
