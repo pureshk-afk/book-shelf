@@ -29,6 +29,14 @@ ALLOWED_HOSTS = [
     "bookshelf.labofdev.ru",
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://bookshelf.labofdev.ru",
+    "http://bookshelf.labofdev.ru",
+    "http://api.bookshelf.labofdev.ru",
+    "https://api.bookshelf.labofdev.ru",
+    "http://127.0.0.1",
+    "http://localhost",
+]
 
 # Application definition
 
