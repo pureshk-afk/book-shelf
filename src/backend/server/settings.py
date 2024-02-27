@@ -24,8 +24,9 @@ ALLOWED_HOSTS = [
     "127.0.0.1",
     "0.0.0.0",
     "backend.localhost",
+    "localhost",
     "api.bookshelf.labofdev.ru",
-    "bookshelf.labofdev.ru"
+    "bookshelf.labofdev.ru",
 ]
 
 
@@ -39,7 +40,6 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-
     # second part
     "corsheaders",
     "django_filters",
@@ -48,8 +48,7 @@ INSTALLED_APPS = [
     "rest_framework.authtoken",
     "rest_framework_simplejwt",
     "drf_yasg",
-    "debug_toolbar",     
-    
+    "debug_toolbar",
     # third part
     "authsystem",
     "book",
@@ -62,7 +61,7 @@ MIDDLEWARE = [
     "django.contrib.sessions.middleware.SessionMiddleware",
     "corsheaders.middleware.CorsMiddleware",  # cors headers
     "django.middleware.common.CommonMiddleware",
-    "whitenoise.middleware.WhiteNoiseMiddleware", # whitenoise
+    "whitenoise.middleware.WhiteNoiseMiddleware",  # whitenoise
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
@@ -99,9 +98,9 @@ WSGI_APPLICATION = "server.wsgi.application"
 
 if DEBUG:
     DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": BASE_DIR / "db.sqlite3",
         }
     }
 
@@ -113,28 +112,22 @@ else:
             "USER": env("DB_USER"),
             "PASSWORD": env("DB_PASSWORD"),
             "HOST": env("DB_HOST"),
-            "PORT": int( env("DB_PORT") ),
+            "PORT": int(env("DB_PORT")),
         }
     }
-
-
 
 
 # Rest Framework Settings
 # https://www.django-rest-framework.org
 
 REST_FRAMEWORK = {
-    "DEFAULT_AUTHENTICATION_CLASSES": [
-        "authsystem.backend.JWTAuthClass"
-    ],
-    'DEFAULT_FILTER_BACKENDS': [
-        'django_filters.rest_framework.DjangoFilterBackend'
-    ],
+    "DEFAULT_AUTHENTICATION_CLASSES": ["authsystem.backend.JWTAuthClass"],
+    "DEFAULT_FILTER_BACKENDS": ["django_filters.rest_framework.DjangoFilterBackend"],
 }
 
 
 # Auth settings
-AUTH_USER_MODEL = "authsystem.User" 
+AUTH_USER_MODEL = "authsystem.User"
 
 PASSWORD_HASHERS = [
     "django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher",
@@ -203,7 +196,6 @@ SIMPLE_JWT = {
     "ROTATE_REFRESH_TOKENS": False,
     "BLACKLIST_AFTER_ROTATION": False,
     "UPDATE_LAST_LOGIN": False,
-
     "ALGORITHM": "HS256",
     "SIGNING_KEY": SECRET_KEY,
     "VERIFYING_KEY": None,
@@ -211,25 +203,21 @@ SIMPLE_JWT = {
     "ISSUER": None,
     "JWK_URL": None,
     "LEEWAY": 0,
-
     "AUTH_HEADER_TYPES": ("JWT",),
     "AUTH_HEADER_NAME": "AUTHORIZATION",
     "USER_ID_FIELD": "id",
     "USER_ID_CLAIM": "user_id",
     "USER_AUTHENTICATION_RULE": "rest_framework_simplejwt.authentication.default_user_authentication_rule",
-
     "AUTH_TOKEN_CLASSES": ("rest_framework_simplejwt.tokens.AccessToken",),
     "TOKEN_TYPE_CLAIM": "token_type",
-
     "JTI_CLAIM": "jti",
-
     "SLIDING_TOKEN_REFRESH_EXP_CLAIM": "refresh_exp",
     "SLIDING_TOKEN_LIFETIME": timedelta(minutes=5),
     "SLIDING_TOKEN_REFRESH_LIFETIME": timedelta(days=1),
 }
 
 # CorsHeaders Settings
-CORS_ALLOW_ALL_ORIGINS = True 
+CORS_ALLOW_ALL_ORIGINS = True
 
 # Debug Toolbar Settings
 # https://django-debug-toolbar.readthedocs.io/en/latest/index.html
@@ -250,7 +238,7 @@ X_FRAME_OPTIONS = "SAMEORIGIN"
 
 # CSRF settings
 # https://docs.djangoproject.com/en/4.1/ref/csrf/
- 
+
 CSRF_COOKIE_SECURE = False
 
 # XSS settings
@@ -274,4 +262,4 @@ SESSION_COOKIE_SECURE = False
 
 SECURE_CONTENT_TYPE_NOSNIFF = False
 
-SWAGGER_SETTINGS = {"DEFAULT_AUTO_SCHEMA_CLASS":"server.config.CustomAutoSchema"}
+SWAGGER_SETTINGS = {"DEFAULT_AUTO_SCHEMA_CLASS": "server.config.CustomAutoSchema"}
