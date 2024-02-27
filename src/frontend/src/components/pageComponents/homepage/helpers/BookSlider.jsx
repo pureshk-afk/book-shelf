@@ -19,7 +19,6 @@ export const BookSlider = ({ title }) => {
       <div className="container-scroll">
         <div className="container-scroll_slider-wrap">
           <button
-            onClick=""
             id="prev-slides"
             className="slide-button material-symbols-outlined"
           >
@@ -35,7 +34,6 @@ export const BookSlider = ({ title }) => {
             ))}
           </div>
           <button
-            onClick=""
             id="next-slides"
             className="slide-button material-symbols-outlined"
           >

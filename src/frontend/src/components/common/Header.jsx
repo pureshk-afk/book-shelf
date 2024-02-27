@@ -16,9 +16,9 @@ export const Header = () => {
       <div className="content">
         <img src={logo} alt="" />
         <div className="content-menu" ref={contentMenuRef}>
-          <a href="#">Книжные новости</a>
-          <a href="#">Жанры</a>
-          <a href="#">Контакты</a>
+          <Link to="#">Книжные новости</Link>
+          <Link to="#">Жанры</Link>
+          <Link to="#">Контакты</Link>
           <span className="link_sign">
             <Link to="/signin">Вход</Link> {"/"}
             <Link to="/signin">/ регистрация</Link>
