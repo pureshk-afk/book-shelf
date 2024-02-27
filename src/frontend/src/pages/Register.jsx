@@ -1,6 +1,6 @@
-import { Helmet } from "react-helmet";
-import { Header } from "../components/common/Header";
-import { RegisterForm } from "../components/pageComponents/register/RegisterForm";
+import { Helmet } from 'react-helmet';
+import { Header } from '../components/common/Header';
+import { RegisterForm } from '../components/pageComponents/register/RegisterForm';
 
 export const Register = () => {
   return (

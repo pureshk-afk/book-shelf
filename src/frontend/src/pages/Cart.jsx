@@ -1,15 +1,15 @@
 import { Helmet } from 'react-helmet';
 import { Header } from '../components/common/Header';
-import { SignInForm } from '../components/pageComponents/signin/SignInForm';
+import { CartContent } from '../components/pageComponents/cart/CartContent';
 
-export const SignIn = () => {
+export const Cart = () => {
   return (
     <>
       <Helmet>
-        <title>Sign in</title>
+        <title>Homepage</title>
       </Helmet>
       <Header />
-      <SignInForm />
+      <CartContent />
     </>
   );
 };
