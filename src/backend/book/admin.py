@@ -5,47 +5,39 @@ from .models import Book, Category, Sale
 
 class BookAdmin(admin.ModelAdmin):
     fields = (
-        'id', 'title', 'preview', 'description', 'category_id'
+        "id",
+        "title",
+        "preview",
+        "description",
+        "category_id",
+        "author",
+        "publication",
+        "created",
+        "translation",
     )
     list_display = (
-        'id', 'title',
+        "id",
+        "title",
     )
-    search_fields = (
-        'id', 'title', 'category_id'
-    )
-    readonly_fields = (
-        'id', 
-    )
+    search_fields = ("id", "title", "category_id")
+    readonly_fields = ("id",)
 
 
 class CategoryAdmin(admin.ModelAdmin):
-    fields = (
-        'id', 'title',
-    )
-    list_display = (
-        'id', 'title',
-    )
+    fields = ("id", "title", "preview")
+    list_display = ("id", "title")
     search_fields = (
-        'id', 'title',
+        "id",
+        "title",
     )
-    readonly_fields = (
-        'id', 
-    )
+    readonly_fields = ("id",)
 
 
 class SaleAdmin(admin.ModelAdmin):
-    fields = (
-        'id', 'percent', 'book_id'
-    )
-    list_display = (
-        'id', 'percent', 'book_id'
-    )
-    search_fields = (
-        'id', 'percent', 'book_id'
-    )
-    readonly_fields = (
-        'id',
-    )
+    fields = ("id", "percent", "book_id")
+    list_display = ("id", "percent", "book_id")
+    search_fields = ("id", "percent", "book_id")
+    readonly_fields = ("id",)
 
 
 admin.site.register(model_or_iterable=Book, admin_class=BookAdmin)

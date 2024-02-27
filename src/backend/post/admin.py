@@ -4,14 +4,10 @@ from .models import Post
 
 
 class PostAdmin(admin.ModelAdmin):
-    model = Post
-    list_display = ['id', 'title']
-    list_editable = []
-    fieldsets = (
-        (None, {
-            'fields': ('title', 'description', 'preview')
-        }),
-    )
+    fields = ("id", "title", "description", "subtitle", "preview", "created")
+    list_display = ("id", "title")
+    search_fields = ("id", "title", "description", "subtitle", "preview", "created")
+    readonly_fields = ("id",)
 
 
 admin.site.register(Post, PostAdmin)
