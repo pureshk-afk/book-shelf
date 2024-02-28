@@ -29,7 +29,7 @@
         <div class="category_of_books">
             <div class="category_of_books-back">
                 <span class="material-symbols-outlined">arrow_back_ios</span>
-                <h2>Главная</h2>
+                <a>Главная</a>
             </div>
 
             <div class="category_of_books-content">
@@ -88,36 +88,34 @@
                                 <h4>О нас</h4>
                                 <div class="card-one__links">
                                     <div class="link">
-                                        <p>Блог</p>
-                                        <p>Категории товаров</p>
-                                        <p>Книги</p>
-                                        <p>Наши соцсети</p>
+                                        <a>Блог</a>
+                                        <a>Категории товаров</a>
+                                        <a>Книги</a>
+                                        <a>Наши соцсети</a>
                                         
                                     </div>
                                 </div>
                             </div>
 
                             <div class="card-one">
-                                <h4>О нас</h4>
+                                <h4>Информация</h4>
                                 <div class="card-one__links">
                                     <div class="link">
-                                        <p>Блог</p>
-                                        <p>Категории товаров</p>
-                                        <p>Книги</p>
-                                        <p>Наши соцсети</p>
+                                        <a>Адреса магазинов</a>
+                                        <a>Доставка</a>
+                                        <a>Оплата</a>
+                                        
                                         
                                     </div>
                                 </div>
                             </div>
 
                             <div class="card-one">
-                                <h4>О нас</h4>
+                                <h4>Свяжитесь с нами</h4>
                                 <div class="card-one__links">
                                     <div class="link">
-                                        <p>Блог</p>
-                                        <p>Категории товаров</p>
-                                        <p>Книги</p>
-                                        <p>Наши соцсети</p>
+                                        <p>+7 (918) 302-56-71</p>
+                                        
                                         
                                     </div>
                                 </div>
@@ -130,5 +128,14 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        document.querySelector('.burger').addEventListener('click', function(){
+            this.classList.toggle('active');
+            document.querySelector('.content-menu').classList.toggle('open');
+        })
+    </script>
+
+    <script type="module" src="homepage.js" defer></script>
 </body>
 </html>
