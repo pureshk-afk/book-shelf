@@ -18,7 +18,7 @@ export const HomepageContent = () => {
     <>
       <article>
         <SubHeader />
-        <CategoryBlock />
+        <CategoryBlock categories={categories} />
         <BookPreview />
         {categories.map((category) => (
           <BookSlider key={category.id} category={category} />

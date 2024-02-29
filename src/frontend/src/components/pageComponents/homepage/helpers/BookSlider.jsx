@@ -14,32 +14,12 @@ export const BookSlider = ({ category }) => {
   ]);
 
   return (
-    <div className='fantasy'>
-      <h2>{category.title}</h2>
+    <div className='container-hp'>
+      <h2>{category?.title}</h2>
       <div className='container-scroll'>
-        <div className='container-scroll_slider-wrap'>
-          <button
-            id='prev-slides'
-            className='slide-button material-symbols-outlined'
-          >
-            {'<-'}
-          </button>
-          <div className='image-list_two'>
-            {data.map((book) => (
-              <BookCard
-                key={book.cost}
-                cost={book.cost}
-                preview={book.preview}
-              />
-            ))}
-          </div>
-          <button
-            id='next-slides'
-            className='slide-button material-symbols-outlined'
-          >
-            {'->'}
-          </button>
-        </div>
+        {data.map((book) => (
+          <BookCard key={book.cost} cost={book.cost} preview={book.preview} />
+        ))}
       </div>
     </div>
   );

@@ -13,7 +13,7 @@ export const BookPreview = () => {
   }, []);
 
   return (
-    <div className='blog'>
+    <div className='blog container-hp'>
       <div className='blog_content'>
         <img src={post?.preview} />
         <div className='blog_content-text'>

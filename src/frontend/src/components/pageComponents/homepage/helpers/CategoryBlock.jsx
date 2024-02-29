@@ -1,10 +1,7 @@
 export const CategoryBlock = ({ categories }) => {
   return (
-    <div className='category'>
-      <div className='category__h'>
-        <h2>Категории</h2>
-      </div>
-
+    <div className='category container-hp'>
+      <h2>Категории</h2>
       <div className='category__cards'>
         {categories?.map((category) => {
           return (

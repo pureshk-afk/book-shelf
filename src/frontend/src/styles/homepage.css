@@ -7,6 +7,12 @@
     margin: auto;
 }
 
+.container-hp{
+    width: 80%;
+    margin: 0 auto;
+
+}
+
 .welcome-post{
     background-color: #000;
     background-size: cover;
@@ -50,28 +56,16 @@
     margin-top: 30px;
 }
 
-
-/* категории*/
-
-.category{
-    width: 90%;
-    height: 984px;
-
-    display: grid;
-    grid-template-rows: repeat(2,1fr);
-}
-
 .category__h{
     text-align: start;
     margin-left: 100px;
 }
 
 .category__cards{
-    width: 90%;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(2,1fr);
-    justify-items: center;
+    display: flex;
+    flex-flow: row wrap;
+
+    width: 30%;
 }
 
 .__card{
@@ -307,8 +301,18 @@ article{
 /*фантастика*/
 
 .container-scroll{
-    max-width: 1515px;
-    width: 95%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: calc(15px / 2);
+
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 15px;
+}
+
+.card {
+    scroll-snap-align: start;
 }
 
 .container-scroll_slider-wrap .image-list_two{
@@ -435,13 +439,6 @@ article{
 
 .container-scroll_slider-wrapp .slide-buttonnn:hover{
     background-color: rgb(52, 50, 50);
-
-}
-
-.fantasy{
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
 }
 
 .popular{
@@ -458,15 +455,6 @@ article{
     gap: 10px;
     background-color: #FFF;
     border: 1px solid black;
-}
-
-.fantasy h2{
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.fantasy a {
-    text-decoration: none;
-    color: #000;
 }
 
 .card .card-buttons button{
@@ -499,14 +487,7 @@ footer{
 }
 
 
-
-
-@media (max-width: 770px) {
-    .scroll{
-        max-width: 400px;
-        
-    }
-
+@media (max-width: 980px) {
     .blog_content{
         display: flex;
         flex-wrap: wrap;
@@ -523,6 +504,14 @@ footer{
 
     .blog_content-text_hader h1{
         font-size: 60px;
+    }
+}
+
+
+@media (max-width: 770px) {
+    .scroll{
+        max-width: 400px;
+        
     }
 
     .popular{
