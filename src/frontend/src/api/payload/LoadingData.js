@@ -48,3 +48,11 @@ export const createCartQuantityItem = async (CQI) => {
   );
   return data;
 };
+
+export const updateCartQuantityItem = async (id, CQI) => {
+  const { data } = await axios.patch(
+    `${BASE_URL}/cart/cart-book-quantity/${id}/`,
+    CQI,
+  );
+  return data;
+};
