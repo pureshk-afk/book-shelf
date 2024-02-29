@@ -1,4 +1,8 @@
+import { BookPreview } from './helpers/BookPreview';
 import { BookSlider } from './helpers/BookSlider';
+import { CategoryBlock } from './helpers/CategoryBlock';
+import { PopularSlider } from './helpers/PopularSlider';
+import { SubHeader } from './helpers/SubHeader';
 
 export const HomepageContent = () => {
   return (
