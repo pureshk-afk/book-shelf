@@ -1,8 +1,8 @@
-import { useState } from "react";
-import preview from "../../../../images/image 1.png";
-import { BookCard } from "./BookCard";
+import { useState } from 'react';
+import preview from '../../../../images/image 1.png';
+import { BookCard } from './BookCard';
 
-export const BookSlider = ({ title }) => {
+export const BookSlider = ({ category }) => {
   const [data, setData] = useState([
     { cost: 111, preview: preview },
     { cost: 112, preview: preview },
@@ -10,38 +10,16 @@ export const BookSlider = ({ title }) => {
     { cost: 114, preview: preview },
     { cost: 115, preview: preview },
     { cost: 116, preview: preview },
-    { cost: 117, preview: preview }
+    { cost: 117, preview: preview },
   ]);
 
   return (
-    <div className="fantasy">
-      <h2>{title}</h2>
-      <div className="container-scroll">
-        <div className="container-scroll_slider-wrap">
-          <button
-            onClick=""
-            id="prev-slides"
-            className="slide-button material-symbols-outlined"
-          >
-            {"<-"}
-          </button>
-          <div className="image-list_two">
-            {data.map((book) => (
-              <BookCard
-                key={book.cost}
-                cost={book.cost}
-                preview={book.preview}
-              />
-            ))}
-          </div>
-          <button
-            onClick=""
-            id="next-slides"
-            className="slide-button material-symbols-outlined"
-          >
-            {"->"}
-          </button>
-        </div>
+    <div className='container-hp'>
+      <h2>{category?.title}</h2>
+      <div className='container-scroll'>
+        {data.map((book) => (
+          <BookCard key={book.cost} cost={book.cost} preview={book.preview} />
+        ))}
       </div>
     </div>
   );

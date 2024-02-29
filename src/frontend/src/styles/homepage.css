@@ -1,7 +1,93 @@
+.content{
+    display: flex;
+    width: 92%;
+    justify-content: space-evenly;
+    margin-right:auto;
+    margin-left: auto;
+    margin: auto;
+}
+
+.container-hp{
+    width: 80%;
+    margin: 0 auto;
+
+}
+
+.welcome-post{
+    background-color: #000;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    width: 100%;
+    height: 750px;
+
+    margin-top: 20px;
+
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-post__content{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.welcome-post__content h1{
+    font-size: 60px;
+}
+
+.welcome-post__content p{
+    font-size: 36px;
+}
+
+.welcome-post__content button{
+    width: 250px;
+    height: 70px;
+    border-radius: 43px;
+
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+.category__h{
+    text-align: start;
+    margin-left: 100px;
+}
+
+.category__cards{
+    display: flex;
+    flex-flow: row wrap;
+
+    width: 30%;
+}
+
+.__card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid black;
+    
+}
+
+.__card img{
+    max-width: 100%;
+    height: 90%;
+
+    width: 100%;
+}
+
 /*главный слайдер*/
 
 .popular h2{
-
     font-family: Arial, sans-serif;
     font-size: 30px;
     font-style: normal;
@@ -12,8 +98,6 @@
 .scroll{
     max-width: 1515px;
     width: 95%;
-    
-    
 }
 
 .slider-wrap .image-list{
@@ -26,7 +110,6 @@
     scroll-behavior: smooth;
    
     margin-bottom: 30px;
-    
 }
 
 .slider-wrap{
@@ -61,8 +144,6 @@
     position: absolute;
     border-radius: inherit;
     cursor: grab;
-    
-
 }
 
 .slider-scrollbar .scrollbar-thumb::after{
@@ -102,7 +183,6 @@
     top: 50%;
 
     transform: translateY(-50%);
-
 }
 
 .slider-wrap .slide-button#prev-slide{
@@ -141,7 +221,6 @@ article{
     flex-direction: column;
     gap: 100px;
     text-align: start;
-    
 }
 
 
@@ -155,15 +234,19 @@ article{
     flex-direction: row;
     width: 100%;
     gap: 100px;
-    
-    
-    
+}
+
+.blog_content img{
+    max-width: 100%;
+    height: auto;
+
+    width: 40%;
 }
 
 .blog_content-text{
     display: flex;
     flex-direction: column;
-    gap: 90px;
+    gap: 80px;
     text-align: center;
     justify-content: center;
     width: 50%;
@@ -198,9 +281,6 @@ article{
 
 
 .blog_content-text_hader h1{
-
-
-
     font-family: 'Caveat';
     font-size: 90px;
     font-style: normal;
@@ -209,7 +289,6 @@ article{
 }
 
 .blog_content-text_hader h2{
-
     font-family: Anonymous Pro;
     font-size: 36px;
     font-style: normal;
@@ -222,10 +301,18 @@ article{
 /*фантастика*/
 
 .container-scroll{
-    max-width: 1515px;
-    width: 95%;
-    
-    
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: calc(15px / 2);
+
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 15px;
+}
+
+.card {
+    scroll-snap-align: start;
 }
 
 .container-scroll_slider-wrap .image-list_two{
@@ -237,8 +324,6 @@ article{
     overflow-x: auto;
     scrollbar-width: none;
     margin-bottom: 30px;
-  
-    
 }
 
 .image-list_two img{
@@ -248,12 +333,11 @@ article{
 }
 
 
-
 .container-scroll_slider-wrap .image-list_two::-webkit-scrollbar{
     display: none;
 }
 
-.container-scroll_slider-wrap .slide-button{
+.container-scroll_slider-wrap .slide-buttonn{
     position: absolute;
 
     height: 50px;
@@ -269,14 +353,13 @@ article{
     top: 50%;
 
     transform: translateY(-50%);
-
 }
 
-.container-scroll_slider-wrap .slide-button#prev-slides{
+.container-scroll_slider-wrap .slide-buttonn#prev-slides{
     left: -20px;
 }
 
-.container-scroll_slider-wrap .slide-button#next-slides{
+.container-scroll_slider-wrap .slide-buttonn#next-slides{
     right: -20px;
 }
 
@@ -284,14 +367,11 @@ article{
     position: relative;
 }
 
-.container-scroll_slider-wrap .slide-button:hover{
+.container-scroll_slider-wrap .slide-buttonn:hover{
     background-color: rgb(52, 50, 50);
-
 }
 
 .card-buttons button:hover{
-
-
     background-color: #000000 !important;
     color: white;
     cursor: pointer;
@@ -304,8 +384,6 @@ article{
 .container-scroll_two{
     max-width: 1515px;
     width: 95%;
-    
-    
 }
 
 .container-scroll_slider-wrapp .image-list_three{
@@ -317,8 +395,6 @@ article{
     overflow-x: auto;
     scrollbar-width: none;
     margin-bottom: 30px;
-  
-    
 }
 
 .image-list_three img{
@@ -327,13 +403,11 @@ article{
     object-fit: cover;
 }
 
-
-
 .container-scroll_slider-wrapp .image-list_three::-webkit-scrollbar{
     display: none;
 }
 
-.container-scroll_slider-wrapp .slide-button{
+.container-scroll_slider-wrapp .slide-buttonnn{
     position: absolute;
 
     height: 50px;
@@ -349,14 +423,13 @@ article{
     top: 50%;
 
     transform: translateY(-50%);
-
 }
 
-.container-scroll_slider-wrapp .slide-button#prev-slides_two{
+.container-scroll_slider-wrapp .slide-buttonnn#prev-slides_two{
     left: -20px;
 }
 
-.container-scroll_slider-wrapp .slide-button#next-slides_two{
+.container-scroll_slider-wrapp .slide-buttonnn#next-slides_two{
     right: -20px;
 }
 
@@ -364,16 +437,8 @@ article{
     position: relative;
 }
 
-.container-scroll_slider-wrapp .slide-button:hover{
+.container-scroll_slider-wrapp .slide-buttonnn:hover{
     background-color: rgb(52, 50, 50);
-
-}
-
-
-.fantasy{
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
 }
 
 .popular{
@@ -401,18 +466,28 @@ article{
     border-radius: 10px;
 }
 
-
 .card-buttons{
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-@media (max-width: 770px) {
-    .scroll{
-        max-width: 400px;
-    }
+footer{
+    background-color: #000;
+    width: 100%;
+    height: 500px;
+    margin-top: 200px;
+}
 
+
+
+@keyframes burgerAnimation {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+
+@media (max-width: 980px) {
     .blog_content{
         display: flex;
         flex-wrap: wrap;
@@ -424,6 +499,19 @@ article{
 
     .blog_content img{
         margin: auto;
+        width: 100%;
+    }
+
+    .blog_content-text_hader h1{
+        font-size: 60px;
+    }
+}
+
+
+@media (max-width: 770px) {
+    .scroll{
+        max-width: 400px;
+        
     }
 
     .popular{
@@ -439,4 +527,5 @@ article{
     .container-scroll_two{
         max-width: 400px;
     }
+
 }

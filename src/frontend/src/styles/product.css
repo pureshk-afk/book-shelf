@@ -1,159 +1,11 @@
-@import url('https://fonts.googleapis.com/css2? Family= Anonymous+Pro & Family= Caveat & Family= Inter & display=swap');
-
-*{
-    margin: 0;
-}
-
-.open{
-    display: flex !important;
-}
-
-
-
-body{
-    display: grid;
-
-    min-height: 100vh;
-    height: 100%;
-
-    width: 100%;
-
-    grid-template-rows: 80px auto;
-
-    background-color: #F2F2F2;
-}
-
-
-
-
-header{
-    display: flex;
-    background-color: black;
-  
-
-    width: 100%;
-    height: 80px;
-
-    flex-direction: column;
-   
-}
-
-.content{
-    display: flex;
-    width: 92%;
-    justify-content: space-between;
-    margin-right:auto;
-    margin-left: auto;
-    
-}
-
-.content-menu{
-    display: flex;
-    justify-content: space-evenly;
-
-
-    width: 55%;
-
-    align-items: flex-start;
-    margin-top: auto;
-    margin-bottom: auto;
-    
-
-
-}
-
-.content-menu a{
-    display: flex;
-    text-decoration: none;
-    color: white;
-    list-style: none;
-
-
-    font-family: Arial, sans-serif;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    flex-shrink: 0;
-    
-
-
-}
-
-/*бургер меню*/
-
-.burger{
-    display: none;
-    position: relative;
-    z-index: 50;
-    align-items: center;
-    justify-content: flex-end;
-    
-    width: 30px;
-    height: 18px;
-}
-
-.burger span{
-    height: 2px;
-    width: 80%;
-    transform: scale(1);
-    background-color: #FFF;
-}
-
-.burger.active span { 
-    transform: scale(0); 
-}
-
-.burger::before, .burger::after{
-    content: "";
-    position: absolute;
-    height: 2px;
-    width: 100%;
-    background-color: #FFF;
-    transition: all 0.3s ease 0s;
-}
-
-.burger::before{
-    top: 0;
-}
-
-.burger::after{
-    bottom: 0;
-}
-
-/*анимация бургер-меню*/
-
-
-
-.burger.active::before{
-    top: 50%;
-    transform: rotate(-45deg) translate(0, -50%);
-
-}
-
-.burger.active::after{
-    bottom: 50%;
-    transform: rotate(45deg) translate(0, 50%);
-}
-
-
-
-
-
-
 .product{
     display: flex;
-
     margin-top: 60px;
-
     flex-direction: column;
     gap: 50px;
-
     justify-content: center;
     align-items: center;
-   
 }
-
 
 .product-content{
     display: flex;
@@ -190,116 +42,26 @@ header{
     
 }
 
-button{
-    width: 71%;
-    height: 66px;
-
-    border-radius: 3px;
-    border: 1px solid #000;
-    margin: auto;
-
-    background-color: #FFF;
-
-   
-}
-
-button:hover{
-    background-color: #000;
-    color: #FFF;
-}
-
 .shevron{
     display: flex;
     align-items: start;
     width: 90%;
 }
 
-
-dt:after {
-    content: ": ";
+@media (max-width: 950px) {
+    .product-content {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
 }
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-@keyframes burgerAnimation {
-    from {opacity: 0}
-    to {opacity: 1}
-}
-
 
 @media (max-width: 770px) {
-
-    .burger{
-        display: flex;
-       justify-content: center;
-    }
-   
-    .content{
-        display: flex;
-        align-items: center;
-    }
-    .content-menu{
-        display: none;
-        flex-direction: column;
-        
-        position: fixed;
-        height: 100%;
-        
-
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 50;
-        overflow-y: auto;
-        padding: 50px 40px;
-        background-color: #000000e7;
-        animation: burgerAnimation 0.4s;
-        
-    }
-
-    .content-menu a{
-        flex-direction: column;
-        row-gap: 30px;
-    }
-
-
-
     .product{
         display: flex;
         justify-content: center;
         align-items: center;
         width: 500px;
         margin-top: 60px;
-
-
     }
-
-    .product-content{
-        width: 500px;
-    }
-    
-
-   
-
-    
-
- 
-
- 
-
-    
-    
-
 }
