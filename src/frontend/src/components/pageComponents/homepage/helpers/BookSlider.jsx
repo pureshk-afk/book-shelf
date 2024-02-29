@@ -2,7 +2,7 @@ import { useState } from 'react';
 import preview from '../../../../images/image 1.png';
 import { BookCard } from './BookCard';
 
-export const BookSlider = ({ title }) => {
+export const BookSlider = ({ category }) => {
   const [data, setData] = useState([
     { cost: 111, preview: preview },
     { cost: 112, preview: preview },
@@ -15,7 +15,7 @@ export const BookSlider = ({ title }) => {
 
   return (
     <div className='fantasy'>
-      <h2>{title}</h2>
+      <h2>{category.title}</h2>
       <div className='container-scroll'>
         <div className='container-scroll_slider-wrap'>
           <button

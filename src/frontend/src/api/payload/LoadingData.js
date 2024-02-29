@@ -2,8 +2,10 @@ import axios from 'axios';
 import BASE_URL from '..';
 import { getQueryParamStringFromObject } from './FetchUtils';
 
-export const fetchPosts = async () => {
-  const { data } = await axios.get(`${BASE_URL}/post/`);
+export const fetchPosts = async (page = 1, page_size = 50) => {
+  const { data } = await axios.get(
+    `${BASE_URL}/post/?page=${page}&page_size=${page_size}`,
+  );
   return data;
 };
 
@@ -14,6 +16,11 @@ export const fetchBookById = async (id) => {
 
 export const fetchCategoryById = async (id) => {
   const { data } = await axios.get(`${BASE_URL}/shelf/category/${id}`);
+  return data;
+};
+
+export const fetchCategories = async () => {
+  const { data } = await axios.get(`${BASE_URL}/shelf/category/`);
   return data;
 };
 
