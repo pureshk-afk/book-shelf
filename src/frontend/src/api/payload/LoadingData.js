@@ -14,6 +14,15 @@ export const fetchBookById = async (id) => {
   return data;
 };
 
+export const fetchBooks = async (queries) => {
+  let url = `${BASE_URL}/shelf/book/`;
+
+  url += getQueryParamStringFromObject(queries);
+
+  const { data } = await axios.get(url);
+  return data;
+};
+
 export const fetchCategoryById = async (id) => {
   const { data } = await axios.get(`${BASE_URL}/shelf/category/${id}`);
   return data;
