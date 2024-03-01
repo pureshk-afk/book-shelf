@@ -67,6 +67,10 @@
     box-sizing: border-box;
 }
 
+.table-content::-webkit-scrollbar {
+    display: none;
+}
+
 .table-bottom {
     height: 60px;
     background-color: #e6e6e6;
@@ -90,6 +94,8 @@
 
     overflow: scroll;
     scroll-snap-type: y mandatory;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 .cart-row {
@@ -175,7 +181,6 @@
 @media (max-width: 900px) {
     .container-cart {
         width: 95%;
-        height: 50px;
         margin-top: 20px;
     }
 

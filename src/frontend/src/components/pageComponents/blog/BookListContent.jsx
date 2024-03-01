@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import {
   fetchBooks,
   fetchCategoryById,
 } from '../../../api/payload/LoadingData';
-import arrowBack from '../../../images/arrow.svg';
+import { BackLink } from '../../common/BackLink';
 import { BookCard } from '../homepage/helpers/BookCard';
 
 export const BookListContent = () => {
@@ -22,12 +22,7 @@ export const BookListContent = () => {
   return (
     <>
       <section className='container-cart'>
-        <div className='cart-head'>
-          <Link to={'/'} className='back-link'>
-            <img src={arrowBack} alt='' className='arrow-icon' />
-            Главная
-          </Link>
-        </div>
+        <BackLink title={'Книги'} />
       </section>
 
       <section className='book-list-preview'>

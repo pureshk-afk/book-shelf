@@ -470,10 +470,6 @@ footer{
         gap: 20px;
     }
 
-    .container-scroll{
-        max-width: 400px; 
-    }
-
     .container-scroll_two{
         max-width: 400px;
     }
@@ -481,5 +477,4 @@ footer{
     .card {
         width: 250px;
     }
-
 }

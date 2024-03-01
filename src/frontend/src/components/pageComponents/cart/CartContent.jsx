@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import { useAuthentication } from '../../../api/auth/AuthUtils';
 import { fetchCarts } from '../../../api/payload/LoadingData';
-import arrowBack from '../../../images/arrow.svg';
 import emptyCart from '../../../images/cart_no_items.png';
+import { BackLink } from '../../common/BackLink';
 import { CartTable } from './CartTable';
 
 export const CartContent = () => {
@@ -23,13 +22,7 @@ export const CartContent = () => {
 
   return (
     <div className='container-cart'>
-      <div className='cart-head'>
-        <Link to={'/'} className='back-link'>
-          <img src={arrowBack} alt='' className='arrow-icon' />
-          Главная
-        </Link>
-        <h2 className='cart-title'>Корзина</h2>
-      </div>
+      <BackLink title={'Корзина'} />
 
       <div className='cart-table'>
         {cart?.cart_books_items?.length > 0 ? (
