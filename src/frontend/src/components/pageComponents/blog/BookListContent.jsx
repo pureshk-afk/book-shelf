@@ -15,7 +15,7 @@ export const BookListContent = () => {
   useEffect(() => {
     fetchCategoryById(category_id).then((category) => setCategory(category));
     fetchBooks({ category_id: category_id }).then(({ results }) => {
-      setBooks([...results, ...results, ...results, ...results, ...results]);
+      setBooks(results);
     });
   }, []);
 

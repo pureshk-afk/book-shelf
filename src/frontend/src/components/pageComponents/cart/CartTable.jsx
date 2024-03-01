@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { BookRow } from './BookRow';
 
 export const CartTable = ({ cart, cartSetter, getCurrentCart }) => {
@@ -15,6 +16,11 @@ export const CartTable = ({ cart, cartSetter, getCurrentCart }) => {
             />
           );
         })}
+      </div>
+      <div className='table-bottom'>
+        <Link to={'/chose-tower'} className='button__town'>
+          Купить
+        </Link>
       </div>
     </div>
   );

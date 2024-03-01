@@ -52,8 +52,6 @@ export const updateCart = async (id, cart) => {
     `${BASE_URL}/cart/cart-only/${id}/`,
     cart,
   );
-  console.log(data);
-  console.log(status);
   return data;
 };
 

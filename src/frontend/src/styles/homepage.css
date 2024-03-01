@@ -76,7 +76,11 @@
     justify-content: center;
 
     border: 1px solid black;
-    
+}
+
+.category-title__homepage {
+    color: #000;
+    text-decoration: none;
 }
 
 .__card img{
