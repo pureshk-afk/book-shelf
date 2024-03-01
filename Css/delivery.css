@@ -8,7 +8,7 @@ body{
     display: flex;
     flex-direction: column;
 
-    gap: 100px;
+    gap: 50px;
 }
 
 
@@ -107,6 +107,116 @@ header{
     to {opacity: 1}
 }
 
+article{
+    display: flex;
+    width: 100%;
+  
+    justify-content: center;
+
+}
+
+.container-delivery{
+    display: flex;
+    width: 90%;
+   
+
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    
+
+}
+
+.container-delivery__select{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+
+.delivery-pic{
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.container-delivery__select h1{
+    font-size: 48px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+
+
+
+/*select*/
+
+.custom-select{
+    width: 547px;
+    height: 54px;
+    position: relative;
+    font-family: Arial;
+    color: black;
+    
+}
+
+.custom-select select {
+    display: none; 
+    color: #000000;
+}
+.select-selected {
+    background-color: rgb(255, 255, 255);
+   
+
+}
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #000000 transparent transparent transparent;
+    color: #000000;
+}
+.select-selected.select-arrow-active:after {
+    border-color: transparent transparent #000000 transparent;
+    top: 7px;
+}
+
+.select-items div,.select-selected {
+    color: #000000;
+    padding: 8px 16px;
+    border: 0.5px solid rgba(0, 0, 0, 0.382);
+    
+    cursor: pointer;
+
+}
+
+.select-items {
+    
+    background-color: rgb(255, 255, 255);
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    color: #000000;
+  }
+
+.select-hide {
+    display: none;
+}
+ 
+.select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+option{
+    color: black;
+}
+
+
 
 
 
@@ -129,174 +239,11 @@ header{
 
 }
 
-article{
-    display: flex;
-    justify-content: center;
-    
-}
 
-.category_of_books{
-    display: flex;
-    max-width: 80%;
-    width: 100%;
-
-
-    flex-direction: column;
-    
-    
-}
-
-
-.category_of_books-back a{
-    font-size: 24px;
-    cursor: pointer;
-}
-
-
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
-}
-
-.category_of_books-back{
-    display: flex;
-    width: auto;
-    height: 30px;
-    align-items: center;
-    gap: 9px;
-
-}
-
-.text{
-    display: flex;
-    justify-content:center ;
-    margin-top: 52px;
-    margin-bottom: 52px;
-}
-
-
-h1{
-    width: 70px;
-}
-
-.contein{
-    display: flex;
-    justify-content: center;
-    margin-top: 52px;
-    
-}
-
-.labl{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    max-width: 80%;
-    width: 100%;
-    gap: 40px;
-    justify-content: center;
-}
-
-.one_labl{
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    width: 304px;
-    height: 64px;
-    background-color: black;
-    color: #FFF;
-
-}
-
-footer{
-    display: flex;
-    width: 100%;
-    background-color: black;
-}
-.footer_all-content{
-    display: flex;
-    width: 100%;
-
-}
-
-.footer_all-content__two{
-    display: flex;
-    flex-direction: row;
-    width: inherit;
-    justify-content: center;
-    align-items: center;
-}
-
-.book_pic{
-    max-height: 100%;
-    height: 80%;
-    margin-top: 30px;
-    
-}
-
-.__info{
-    width: 100%;
-}
-
-.__info p, h4{
-    color: #FFF;
-}
-.footer_all-content__many{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-
-    width: 70%;
-}
-
-.info__content{
-    display: flex;
-    flex-direction: row;
-    gap: 70px;
-}
-
-.logo{
-    max-width: 150px;
-}
-
-.footer_all-content__many hr{
-    width: 100%;
-
-}
-.card-one{
-    width: 14%;
-}
-
-.card-one__links{
-    display: flex;
-    width: 100%;
-   
-
-
-
-}
-
-.link{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-
-    width: 130px;
-    color: #FFF;
-}
-.link a{
-    cursor: pointer;
-}
 
 
 @media (max-width: 770px) {
-    .scroll{
-        max-width: 400px;
-        
-    }
+    
 
     .burger{
         display: flex;
