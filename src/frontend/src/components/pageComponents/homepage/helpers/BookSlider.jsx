@@ -1,24 +1,27 @@
-import { useState } from 'react';
-import preview from '../../../../images/image 1.png';
+import { useEffect, useState } from 'react';
+import { fetchBooks } from '../../../../api/payload/LoadingData';
 import { BookCard } from './BookCard';
 
 export const BookSlider = ({ category }) => {
-  const [data, setData] = useState([
-    { cost: 111, preview: preview },
-    { cost: 112, preview: preview },
-    { cost: 113, preview: preview },
-    { cost: 114, preview: preview },
-    { cost: 115, preview: preview },
-    { cost: 116, preview: preview },
-    { cost: 117, preview: preview },
-  ]);
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetchBooks({ category_id: category.id }).then(({ results }) =>
+      setData(results),
+    );
+  });
 
   return (
     <div className='container-hp'>
       <h2>{category?.title}</h2>
       <div className='container-scroll'>
         {data.map((book) => (
-          <BookCard key={book.cost} cost={book.cost} preview={book.preview} />
+          <BookCard
+            key={book.id}
+            id={book.id}
+            cost={book.description}
+            preview={book.preview}
+          />
         ))}
       </div>
     </div>

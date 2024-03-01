@@ -67,16 +67,39 @@
     box-sizing: border-box;
 }
 
+.table-content::-webkit-scrollbar {
+    display: none;
+}
+
+.table-bottom {
+    height: 60px;
+    background-color: #e6e6e6;
+    border: 2px solid black;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
+}
+
 .table-content {
-    height: calc(100% - 60px);
+    height: calc(100% - 120px);
     background-color: #fff;
     box-sizing: border-box;
 
-    border: 2px solid black;
-    border-top: none;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+
+    overflow: scroll;
+    scroll-snap-type: y mandatory;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 .cart-row {
+    scroll-snap-align: start;
     display: grid;
     grid-template-columns: 160px auto 100px 150px 150px;
     width: 100%;
@@ -135,4 +158,74 @@
 
 .cart-row-total {
     text-align: right;
+}
+
+.button__town {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+    width: 80%;
+    max-width: 250px;
+
+    height: 50px;
+
+    background-color: #000;
+    text-decoration: none;
+    color: #fff;
+
+    border-radius: 5px;
+}
+
+@media (max-width: 900px) {
+    .container-cart {
+        width: 95%;
+        margin-top: 20px;
+    }
+
+    .table-head {
+        height: 30px;
+    }
+
+    .table-cart__skeleton {
+        height: 450px;
+    }
+
+    .table-content {
+        height: calc(100% - 90px);
+    }
+}
+
+
+@media (max-width: 770px) {
+    .cart-row-image {
+        display: none;
+    }
+
+    .cart-row {
+        display: grid;
+        grid-template-columns: auto 60px 100px 60px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .cart-row-price__once {
+        text-align: center;
+    }
+
+    .quantity-counter {
+        width: 70px
+    }
+}
+
+@media (max-width: 450px) {
+    .table-bottom {
+        justify-content: center;
+        padding: 0;
+    }
+
+    .image__empty {
+        width: 100%;
+    }
 }

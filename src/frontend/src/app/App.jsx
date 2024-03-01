@@ -1,6 +1,8 @@
 import { Route, Routes } from 'react-router-dom';
 import { CheckAuth } from '../components/common/CheckAuth';
+import { About } from '../pages/About';
 import { Blog } from '../pages/Blog';
+import { BookList } from '../pages/BookList';
 import { Cart } from '../pages/Cart';
 import { Homepage } from '../pages/Homepage';
 import { OneBook } from '../pages/OneBook';
@@ -12,6 +14,7 @@ function App() {
   return (
     <Routes>
       <Route key={'homepage'} path={'/'} element={<Homepage />} />
+      <Route key={'about'} path={'/about'} element={<About />} />
       <Route key={'sign in'} path={'/signin'} element={<SignIn />} />
       <Route key={'register'} path={'/registration'} element={<Register />} />
       <Route key={'blog'} path={'/blog'} element={<Blog />} />
@@ -23,6 +26,11 @@ function App() {
             <Cart />
           </CheckAuth>
         }
+      />
+      <Route
+        key={'book list'}
+        path={'/book/category/:category_id'}
+        element={<BookList />}
       />
       <Route
         key={'one book'}

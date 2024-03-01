@@ -1,11 +1,11 @@
 class CookieManager {
-  getAllCookiesAsObject() {
-    console.log(document.cookie);
-  }
-
   setCookie(name, value, options = {}) {
+    let now = new Date();
+    now.setTime(now.getTime() + 1000 * 36000);
+
     options = {
       path: '/',
+      expires: now.toUTCString(),
       ...options,
     };
 

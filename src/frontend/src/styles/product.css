@@ -61,7 +61,24 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 500px;
-        margin-top: 60px;
+        width: 95%;
+        margin: 60px auto 0 auto;
+    }
+
+    .product-content {
+        width: 100%;
+    }
+
+    .preview-book {
+        width: 100%;
+    }
+
+    .product-content_info-menu {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .product-content_info {
+        width: 100%;
     }
 }

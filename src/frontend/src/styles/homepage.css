@@ -17,16 +17,17 @@
     background-color: #000;
     background-size: cover;
     background-repeat: no-repeat;
-
-    width: 100%;
-    height: 750px;
-
+    
     margin-top: 20px;
+    width: 100%;
+    height: 70dvh;
 
     display: flex;
     text-align: center;
     justify-content: center;
     align-items: center;
+
+    background-image: url("/hpp.png");
 }
 
 .welcome-post__content{
@@ -75,7 +76,11 @@
     justify-content: center;
 
     border: 1px solid black;
-    
+}
+
+.category-title__homepage {
+    color: #000;
+    text-decoration: none;
 }
 
 .__card img{
@@ -311,10 +316,6 @@ article{
     scroll-padding-inline: 15px;
 }
 
-.card {
-    scroll-snap-align: start;
-}
-
 .container-scroll_slider-wrap .image-list_two{
     display: grid;
     grid-template-columns: repeat(7,1fr);
@@ -355,97 +356,13 @@ article{
     transform: translateY(-50%);
 }
 
-.container-scroll_slider-wrap .slide-buttonn#prev-slides{
-    left: -20px;
-}
-
-.container-scroll_slider-wrap .slide-buttonn#next-slides{
-    right: -20px;
-}
-
-.container-scroll_slider-wrap{
-    position: relative;
-}
-
-.container-scroll_slider-wrap .slide-buttonn:hover{
-    background-color: rgb(52, 50, 50);
-}
-
-.card-buttons button:hover{
-    background-color: #000000 !important;
-    color: white;
-    cursor: pointer;
-    border: none;
-}
-
-
-/*зарубежная литература*/
-
-.container-scroll_two{
-    max-width: 1515px;
-    width: 95%;
-}
-
-.container-scroll_slider-wrapp .image-list_three{
-    display: grid;
-    grid-template-columns: repeat(7,1fr);
-    gap: 18px;
-    align-items: end;
-    font-size: 0;
-    overflow-x: auto;
-    scrollbar-width: none;
-    margin-bottom: 30px;
-}
-
-.image-list_three img{
-    width: 263px;
-    height: 367px;
-    object-fit: cover;
-}
-
-.container-scroll_slider-wrapp .image-list_three::-webkit-scrollbar{
-    display: none;
-}
-
-.container-scroll_slider-wrapp .slide-buttonnn{
-    position: absolute;
-
-    height: 50px;
-    width: 50px;
-    color: #FFF;
-    background-color: #000000;
-    font-size: 2.2rem;
-    cursor: pointer;
-    border-radius: 50%;
-    outline: none;
-    border: none;
-
-    top: 50%;
-
-    transform: translateY(-50%);
-}
-
-.container-scroll_slider-wrapp .slide-buttonnn#prev-slides_two{
-    left: -20px;
-}
-
-.container-scroll_slider-wrapp .slide-buttonnn#next-slides_two{
-    right: -20px;
-}
-
-.container-scroll_slider-wrapp{
-    position: relative;
-}
-
-.container-scroll_slider-wrapp .slide-buttonnn:hover{
-    background-color: rgb(52, 50, 50);
-}
 
 .popular{
     margin-top: 100px;
 }
 
 .card{
+    box-sizing: border-box;
     display: flex;
     width: inherit;
     height: inherit;
@@ -455,15 +372,32 @@ article{
     gap: 10px;
     background-color: #FFF;
     border: 1px solid black;
+    scroll-snap-align: start;
+    width: 300px;   
 }
 
-.card .card-buttons button{
-    width: 45%;
+.card-link {
+    width: 300px;
+}
+
+.card_button {
+    width: 80%;
     height: 50px;
     font-size: large;
     background-color: #FFF;
     border: 1px solid black;
     border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+}
+
+.title-category__homepage {
+    margin-bottom: 34px;
 }
 
 .card-buttons{
@@ -509,6 +443,22 @@ footer{
 
 
 @media (max-width: 770px) {
+    .container-hp {
+        width: 95%;
+    }
+
+    .hp-title {
+        font-size: 28px;
+    }
+
+    .welcome-post__content p {
+        font-size: 20px;
+    }
+
+    .welcome-post__content button {
+        font-size: 20px;
+    }
+
     .scroll{
         max-width: 400px;
         
@@ -520,12 +470,11 @@ footer{
         gap: 20px;
     }
 
-    .container-scroll{
-        max-width: 400px; 
-    }
-
     .container-scroll_two{
         max-width: 400px;
     }
 
+    .card {
+        width: 250px;
+    }
 }
