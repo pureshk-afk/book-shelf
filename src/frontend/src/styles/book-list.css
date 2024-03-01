@@ -1,0 +1,41 @@
+.book-list-preview {
+    width: 100%;
+    min-height: 50dvh;
+    background-image: url("/book-list-back.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+
+    padding-top: 10dvh;
+}
+
+.book-list-title {
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 48px;
+    box-sizing: border-box;
+
+    width: 80%;
+    margin: 0 auto;
+}
+
+.container-book-list {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.book-list {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    justify-items: center;
+    gap: 20px;
+}
+
+@media (max-width: 770px) {
+    .book-list {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}

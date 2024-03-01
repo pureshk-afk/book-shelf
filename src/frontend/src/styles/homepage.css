@@ -358,6 +358,7 @@ article{
 }
 
 .card{
+    box-sizing: border-box;
     display: flex;
     width: inherit;
     height: inherit;
@@ -471,6 +472,10 @@ footer{
 
     .container-scroll_two{
         max-width: 400px;
+    }
+
+    .card {
+        width: 250px;
     }
 
 }

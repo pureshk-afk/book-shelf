@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import { CheckAuth } from '../components/common/CheckAuth';
 import { Blog } from '../pages/Blog';
+import { BookList } from '../pages/BookList';
 import { Cart } from '../pages/Cart';
 import { Homepage } from '../pages/Homepage';
 import { OneBook } from '../pages/OneBook';
@@ -23,6 +24,11 @@ function App() {
             <Cart />
           </CheckAuth>
         }
+      />
+      <Route
+        key={'book list'}
+        path={'/book/category/:category_id'}
+        element={<BookList />}
       />
       <Route
         key={'one book'}
