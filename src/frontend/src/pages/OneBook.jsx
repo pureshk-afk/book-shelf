@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet';
+import { Footer } from '../components/common/Footer';
 import { Header } from '../components/common/Header';
 import { BookContent } from '../components/pageComponents/book/BookContent';
 import '../styles/product.css';
@@ -11,6 +12,7 @@ export const OneBook = () => {
       </Helmet>
       <Header />
       <BookContent />
+      <Footer />
     </>
   );
 };

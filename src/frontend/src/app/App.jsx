@@ -4,6 +4,8 @@ import { About } from '../pages/About';
 import { Blog } from '../pages/Blog';
 import { BookList } from '../pages/BookList';
 import { Cart } from '../pages/Cart';
+import { ChooseTown } from '../pages/ChooseTown';
+import { DeliverThanks } from '../pages/DeliverThanks';
 import { Homepage } from '../pages/Homepage';
 import { OneBook } from '../pages/OneBook';
 import { Register } from '../pages/Register';
@@ -14,6 +16,12 @@ function App() {
   return (
     <Routes>
       <Route key={'homepage'} path={'/'} element={<Homepage />} />
+      <Route
+        key={'choose town'}
+        path={'/choose-town'}
+        element={<ChooseTown />}
+      />
+      <Route key={'thanks'} path={'/thanks'} element={<DeliverThanks />} />
       <Route key={'about'} path={'/about'} element={<About />} />
       <Route key={'sign in'} path={'/signin'} element={<SignIn />} />
       <Route key={'register'} path={'/registration'} element={<Register />} />

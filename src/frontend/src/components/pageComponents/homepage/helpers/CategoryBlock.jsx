@@ -14,7 +14,10 @@ export const CategoryBlock = ({ categories }) => {
             >
               <div className='__card'>
                 <h3>{category.title}</h3>
-                <img src={category.preview} />
+                <img
+                  src={category.preview}
+                  className='preview-category__homepage'
+                />
               </div>
             </Link>
           );

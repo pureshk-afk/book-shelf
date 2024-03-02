@@ -1,17 +1,17 @@
 import { Helmet } from 'react-helmet';
 import { Footer } from '../components/common/Footer';
 import { Header } from '../components/common/Header';
-import { AboutContent } from '../components/pageComponents/about/AboutContent';
-import '../styles/about.css';
+import { Thanks } from '../components/pageComponents/deliver/Thanks';
+import '../styles/thx.css';
 
-export const About = () => {
+export const DeliverThanks = () => {
   return (
     <>
       <Helmet>
-        <title>About</title>
+        <title>Thanks!</title>
       </Helmet>
       <Header />
-      <AboutContent />
+      <Thanks />
       <Footer />
     </>
   );

@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet';
+import { Footer } from '../components/common/Footer';
 import { Header } from '../components/common/Header';
 import { HomepageContent } from '../components/pageComponents/homepage/HomepageContent';
 import '../styles/homepage.css';
@@ -11,6 +12,7 @@ export const Homepage = () => {
       </Helmet>
       <Header />
       <HomepageContent />
+      <Footer />
     </>
   );
 };

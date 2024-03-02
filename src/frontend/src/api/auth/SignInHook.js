@@ -37,9 +37,10 @@ export const FetchUserByToken = async (token) => {
       throw new Error();
     });
 
-  if (status >= 200 && status <= 300) {
+  if (status >= 200 && status < 300) {
     return data;
   }
+
   throw new Error();
 };
 

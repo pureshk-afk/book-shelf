@@ -3,6 +3,7 @@ import { fetchCategories } from '../../../api/payload/LoadingData';
 import { BookPreview } from './helpers/BookPreview';
 import { BookSlider } from './helpers/BookSlider';
 import { CategoryBlock } from './helpers/CategoryBlock';
+import { PopularSlider } from './helpers/PopularSlider';
 import { SubHeader } from './helpers/SubHeader';
 
 export const HomepageContent = () => {
@@ -18,6 +19,7 @@ export const HomepageContent = () => {
     <>
       <article>
         <SubHeader />
+        <PopularSlider />
         <CategoryBlock categories={categories} />
         <BookPreview />
         {categories.map((category) => (
