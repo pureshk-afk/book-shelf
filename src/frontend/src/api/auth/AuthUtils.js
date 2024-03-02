@@ -11,6 +11,7 @@ export const useRefreshToken = async () => {
   RefreshAccessToken(refreshToken)
     .then((r) => {
       CookieManager.setCookie('access', r.access);
+      return;
     })
     .catch(() => {
       return;

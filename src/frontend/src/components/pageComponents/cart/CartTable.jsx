@@ -18,7 +18,7 @@ export const CartTable = ({ cart, cartSetter, getCurrentCart }) => {
         })}
       </div>
       <div className='table-bottom'>
-        <Link to={'/chose-tower'} className='button__town'>
+        <Link to={'/choose-town'} className='button__town'>
           Купить
         </Link>
       </div>

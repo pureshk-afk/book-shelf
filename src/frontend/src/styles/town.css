@@ -1,0 +1,46 @@
+.container-deliver {
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+.deliver-preview-img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+}
+
+.deliver-choice-container {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.deliver-select {
+    margin-bottom: 50px;
+    width: 100%;
+    margin-top: 30%;
+    max-width: 400px;
+}
+
+.deliver-button {
+    max-width: 400px;
+    width: 100%;
+    padding: 14px 20px;
+
+    color: #fff;
+    font-size: 20px;
+
+    background-color: #000;
+    border: 2px solid black;
+    border-radius: 6px;
+}
+
+@media (max-width: 770px) {
+    .deliver-preview-container {
+        display: none;
+    }
+
+    .container-deliver {
+        grid-template-columns: none;
+    }
+}

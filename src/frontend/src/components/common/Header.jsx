@@ -14,7 +14,7 @@ export const Header = () => {
 
   useEffect(() => {
     useAuthentication().then((r) => setUser(r));
-  });
+  }, []);
 
   return (
     <header>
@@ -28,7 +28,7 @@ export const Header = () => {
           {!user ? (
             <>
               <Link to='/signin'>Вход</Link>
-              <Link to='/register'>Регистрация</Link>
+              <Link to='/registration'>Регистрация</Link>
             </>
           ) : (
             <>

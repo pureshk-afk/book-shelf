@@ -1,17 +1,17 @@
 import { Helmet } from 'react-helmet';
 import { Footer } from '../components/common/Footer';
 import { Header } from '../components/common/Header';
-import { AboutContent } from '../components/pageComponents/about/AboutContent';
-import '../styles/about.css';
+import { ChoiceTownContent } from '../components/pageComponents/deliver/ChoiceTownContent';
+import '../styles/town.css';
 
-export const About = () => {
+export const ChooseTown = () => {
   return (
     <>
       <Helmet>
-        <title>About</title>
+        <title>Choose town</title>
       </Helmet>
       <Header />
-      <AboutContent />
+      <ChoiceTownContent />
       <Footer />
     </>
   );

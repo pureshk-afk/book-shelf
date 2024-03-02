@@ -13,7 +13,7 @@ export const BookSlider = ({ category }) => {
 
   return (
     <div className='container-hp'>
-      <h2>{category?.title}</h2>
+      <h2 className='slider-title'>{category?.title}</h2>
       <div className='container-scroll'>
         {data.map((book) => (
           <BookCard
