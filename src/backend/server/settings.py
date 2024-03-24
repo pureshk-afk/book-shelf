@@ -27,10 +27,13 @@ ALLOWED_HOSTS = [
     "localhost",
     "api.bookshelf.labofdev.ru",
     "bookshelf.labofdev.ru",
+    "94.250.252.175"
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     "https://bookshelf.labofdev.ru",
+    "https://94.250.252.175"
+    "http://94.250.252.175"
     "http://bookshelf.labofdev.ru",
     "http://api.bookshelf.labofdev.ru",
     "https://api.bookshelf.labofdev.ru",
